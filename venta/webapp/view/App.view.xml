@@ -1,0 +1,26 @@
+<mvc:View   controllerName="chch.com.venta.controller.App"
+            xmlns="sap.m"
+            xmlns:mvc="sap.ui.core.mvc">
+
+    <Shell id="shell">
+
+        <App id="app">
+            <pages>
+                <Page id="page">
+
+                    <Button id="button"                            
+                            text="Default"
+                            type="Critical"
+                            icon="sap-icon://account"
+                            press="onShowHello" >
+                    </Button>
+                    <Input  id="inputview"
+                            value="{view>/recipient/name}"
+                            description="Detalle {view>/recipient/name}"
+                            valueLiveUpdate="true">
+                    </Input>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

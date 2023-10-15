@@ -1,0 +1,65 @@
+<mvc:View       controllerName="chch.com.compra.controller.App"
+                xmlns="sap.m"
+                xmlns:mvc="sap.ui.core.mvc" >
+
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page">
+                    <content>
+                        <Panel  id="panel1"
+                                headerText="Mi primer panel"
+                                expandable="true"
+                                expanded="true">
+                            <headerToolbar>
+                                <OverflowToolbar id="overflow"
+                                                 style="Clear">
+                                    <Title text="mi prime panel con overFlowToolbar"/>
+                                </OverflowToolbar>
+                            </headerToolbar>
+                            <content>
+                                <Label 
+                                    id="label1"
+                                    text="Mi primera etiqueta con su campo">
+                                </Label>
+                                <Input 
+                                    id="input1"
+                                    description="ingresar valor"
+                                    value="Ingresar datos de mi primera compra">
+                                </Input>
+                                <Label 
+                                    id="label2"
+                                    text="Mi primer buttom">
+                                </Label>
+                                <Button id="button"
+                                        text="Default"
+                                        press="onShowHello">
+                                </Button>
+                                <Label 
+                                    id="label3"
+                                    text="mi primer modelo con JSONModel">
+                                </Label>
+                                <Input 
+                                    id="input3"
+                                    value="{view>/recipient/name}"
+                                    description="{view>/recipient/name}"
+                                    valueLiveUpdate="true">
+                                </Input>
+                                <Label 
+                                    id="label4"
+                                    text="USO DEL MODELO I18N.properties">
+                                </Label>
+                                <Input 
+                                    id="input4"
+                                    value="hola mundoo"
+                                    description="{i18n>label4}"
+                                    valueLiveUpdate="true">
+                                </Input>
+                            </content>
+                        </Panel>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
