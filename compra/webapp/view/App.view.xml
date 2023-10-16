@@ -51,7 +51,7 @@
                                 </Label>
                                 <Input 
                                     id="input4"
-                                    value="hola mundoo"
+                                    value="hola mundo"
                                     description="{i18n>label4}"
                                     valueLiveUpdate="true">
                                 </Input>
