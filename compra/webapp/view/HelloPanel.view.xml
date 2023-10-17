@@ -1,0 +1,21 @@
+<mvc:View   controllerName="chch.com.compra.controller.HelloPanel"
+            xmlns="sap.m"
+            xmlns:mvc="sap.ui.core.mvc">
+    
+    <Panel  id="hellopanel"
+            headerText="Hello Panel {i18n>appTitle}">
+        <content>
+            <Label  id="labelhellopanel"
+                    text="Ingresar Hello Panel">
+            </Label>
+            <Input  id="inputhellopanel"
+                    value="Ingresar descripción para Hello Panel">            
+            </Input>
+            <Button id="butonhellopanel"
+                    text="Ejecutar"
+                    press="onShowHelloPanel">
+            </Button>
+        </content>
+    </Panel>
+
+</mvc:View>

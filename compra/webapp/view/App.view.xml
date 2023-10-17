@@ -14,7 +14,7 @@
                             <headerToolbar>
                                 <OverflowToolbar id="overflow"
                                                  style="Clear">
-                                    <Title text="mi prime panel con overFlowToolbar"/>
+                                    <Title text="mi prime panel con overFlowToolba {i18n>appTitle}"/>
                                 </OverflowToolbar>
                             </headerToolbar>
                             <content>
@@ -55,6 +55,12 @@
                                     description="{i18n>label4}"
                                     valueLiveUpdate="true">
                                 </Input>
+                            </content>
+                                <mvc:XMLView    id="viewHelloPanel"
+                                                viewName="chch.com.compra.view.HelloPanel"
+                                                type="XML">
+                                </mvc:XMLView>
+                            <content>
                             </content>
                         </Panel>
                     </content>
