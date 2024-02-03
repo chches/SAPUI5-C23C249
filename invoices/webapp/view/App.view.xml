@@ -1,0 +1,36 @@
+<mvc:View   controllerName="chches.invoices.controller.App"
+            xmlns="sap.m"
+            xmlns:mvc="sap.ui.core.mvc">
+    <Shell  id="idShell">
+        <App    id="idApp">
+            <pages>
+                <Page   id="idPage"
+                        title="Invoices Page">
+                    <content>
+                        <Panel  id="idPanel"
+                                headerText="{i18n>showPanelText}"
+                                expandable="true"
+                                expanded="true">
+                            <content>
+                                <Button id="IdButton"
+                                        text="{i18n>showHelloButtonText}"
+                                        press="onShowHello"
+                                        type="Emphasized"
+                                        icon="sap-icon://alert" />
+                                <Input  class="sapUiSmallMarginBegin"
+                                        id="idInput"
+                                        description="Hello {view>/recipient/name}"
+                                        value="{view>/recipient/name}"
+                                        valueLiveUpdate="true"
+                                        width="60%"/>
+                                <Text   id="idText"
+                                        text="{i18n>hello}"
+                                        class="sapUISmallMargin bodElements"/>
+                            </content>                            
+                        </Panel>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
