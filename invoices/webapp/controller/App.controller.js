@@ -15,7 +15,7 @@ sap.ui.define(
             _loadModel : function (){
                 let oData = {
                     recipient : {
-                        name : "World"
+                        name : "World Load Model"
                     }
                 };
                 let oModel = new JSONModel(oData);
