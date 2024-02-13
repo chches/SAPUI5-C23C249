@@ -5,9 +5,10 @@
 sap.ui.define([
         "sap/ui/core/UIComponent",
         "sap/ui/Device",
-        "chches/invoices/model/models"
+        "chches/invoices/model/models",
+        "chches/invoices/controller/HelloDialog"
     ],
-    function (UIComponent, Device, models) {
+    function (UIComponent, Device, models, HelloDialog) {
         "use strict";
 
         return UIComponent.extend("chches.invoices.Component", {
@@ -29,6 +30,18 @@ sap.ui.define([
 
                 // set the device model
                 this.setModel(models.createDeviceModel(), "device");
+
+                this._oHelloDialog = new HelloDialog(this.getRootControl());
+
+            },
+
+            exit : function( ) {
+                this._oHelloDialog.destroy();
+                delete this._oHelloDialog;
+            },
+
+            openHelloDialog : function( ){
+                this._oHelloDialog.open();
             }
         });
     }

@@ -1,0 +1,19 @@
+<core:FragmentDefinition        xmlns="sap.m"  
+                                xmlns:core="sap.ui.core">
+    <Dialog     id="idDialog"
+                title="Fragmento DialogoHelloPanel">
+        <content>
+                <core:Icon      src="sap-icon://hello-world"
+                                size="4rem">
+                </core:Icon>
+        </content>
+        <endButton>
+                <Button id="idButtonCloseFD"
+                        text="{i18n>buttonCloseFD}"
+                        press="onButtonCloseFD"
+                        type="Reject"
+                        icon="sap-icon://decline">
+                </Button>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

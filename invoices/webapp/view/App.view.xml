@@ -1,6 +1,7 @@
 <mvc:View   controllerName="chches.invoices.controller.App"
             xmlns="sap.m"
-            xmlns:mvc="sap.ui.core.mvc">
+            xmlns:mvc="sap.ui.core.mvc"
+            xmlns:core="sap.ui.core">
     <Shell  id="idShell">
         <App    id="idApp">
             <pages>
@@ -11,6 +12,11 @@
                                         viewName="chches.invoices.view.HelloPanel"
                                         type="XML">
                         </mvc:XMLView>
+
+                        <core:Fragment  fragmentName="chches.invoices.fragment.form01"
+                                        type="XML">
+                        </core:Fragment>
+
                     </content>
                 </Page>
             </pages>

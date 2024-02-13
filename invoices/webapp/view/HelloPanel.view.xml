@@ -5,22 +5,35 @@
     <Panel  id="idPanel"
             headerText="{i18n>showPanelText}"
             expandable="true"
-            expanded="true">
+            expanded="true"
+            width="60%">
+        <Toolbar        id="idToolbar">
+                <content>
+                        <Button id="idButton2"
+                                text="buton"
+                                press="onButton2DialogPanel">
+                        </Button>
+                </content>
+        </Toolbar>
         <content>
-            <Button id="IdButton"
-                    text="{i18n>showHelloButtonText}"
-                    press="onShowHello"
-                    type="Emphasized"
-                    icon="sap-icon://alert" />
-            <Input  class="sapUiSmallMarginBegin"
-                    id="idInput"
-                    description="Hello {view>/recipient/name}"
-                    value="{view>/recipient/name}"
-                    valueLiveUpdate="true"
-                    width="60%"/>
-            <Text   id="idText"
-                    text="{i18n>hello}"
-                    class="sapUISmallMargin bodElements"/>
+                <Button id="IdButton"
+                        text="{i18n>showHelloButtonText}"
+                        press="onShowHello"
+                        type="Emphasized"
+                        icon="sap-icon://alert" />
+                <Input  class="sapUiSmallMarginBegin"
+                        id="idInput"
+                        description="Hello {view>/recipient/name}"
+                        value="{view>/recipient/name}"
+                        valueLiveUpdate="true"
+                        width="60%"/>
+                <Text   id="idText"
+                        text="{i18n>hello}"
+                        class="sapUISmallMargin bodElements"/>
+                <Button id="idButtonDialogHelloPanel"
+                        text="Dialogo Hello Panel" 
+                        press="onDialogoHelloPanel"
+                        class="sapUiSmallMargin"/>        
         </content>                            
     </Panel>
 

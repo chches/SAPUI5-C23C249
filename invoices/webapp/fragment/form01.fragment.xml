@@ -1,0 +1,19 @@
+<core:FragmentDefinition    xmlns="sap.m"   
+                            xmlns:core="sap.ui.core"
+                            xmlns:form="sap.ui.layout.form">
+    <Panel  id="idPanelFD01"
+            headerText="Fragmento 01"
+            class="sapUiResponsiveMargin"
+            width="50%">
+    
+        <form:SimpleForm    id="IdSimpleForm"
+                            editable="true">
+            <form:content>
+                <Label  id="idLabelSF01" 
+                        text="Texto"/>
+                <Input  id="idInputSF01"
+                        width="50%"/>
+            </form:content>
+        </form:SimpleForm>
+    </Panel>    
+</core:FragmentDefinition>
