@@ -17,6 +17,11 @@
                                         type="XML">
                         </core:Fragment>
 
+                        <mvc:XMLView    id="idXMLViewInvoices"
+                                        viewName="chches.invoices.view.InvoicesList"
+                                        type="XML">
+                        </mvc:XMLView>
+
                     </content>
                 </Page>
             </pages>

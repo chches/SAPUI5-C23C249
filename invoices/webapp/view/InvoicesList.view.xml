@@ -1,0 +1,23 @@
+<mvc:View   controllerName="chches.invoices.controller.InvoicesList"
+            xmlns="sap.m"
+            xmlns:mvc="sap.ui.core.mvc">
+    <List   id="idList"
+            headerText="{i18n>showHeaderTextInvoicesList}"
+            items="{invoices>/Invoices}"
+            width="auto"
+            >
+        <items>
+            <ObjectListItem id="idObjectListItem" 
+                            title="{invoices>ProductName} x {invoices>Quantity}"
+                            number="{
+                                parts:[
+                                    { 
+                                        path:'invoices>ExtendedPrice'
+                                    }
+                                ],
+                                type :  'sap.ui.model.odata.type.Currency'
+                            }"
+                            numberUnit="{currency>/usd}"/>
+        </items>        
+    </List>
+</mvc:View>
