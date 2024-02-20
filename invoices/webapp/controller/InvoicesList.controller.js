@@ -16,7 +16,6 @@ sap.ui.define(
                 };
                 let oCurrency = new JSONModel(oData);
                 this.getView().setModel(oCurrency, "currency");
-                console.log(oCurrency);
             }
         });
     }
