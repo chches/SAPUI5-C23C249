@@ -4,9 +4,25 @@
     <List   id="idList"
             headerText="{i18n>showHeaderTextInvoicesList}"
             class="sapUiResponsiveMargin"
-            items="{invoices>/Invoices}"
+            items="{
+                path:'invoices>/Invoices',
+                sorter:{
+                    path:'invoices>ShipperName',
+                    group:true
+                }
+            }"
             width="auto"
             >
+        <headerToolbar>
+            <Toolbar width="100%">
+                <content>
+                    <Title  text="{i18n>titleToolBarList}"/>
+                    <ToolbarSpacer/>
+                    <SearchField    width="50%"
+                                    search="onFilterInvoice"/>
+                </content>
+            </Toolbar>
+        </headerToolbar>
         <items>
             <ObjectListItem id="idObjectListItem" 
                             title="{invoices>ProductName} x {invoices>Quantity}"
@@ -20,10 +36,35 @@
                                     }
                                 ],
                                 type:'sap.ui.model.type.Currency',
-                                formatOptions: {showMeasure: false}
+                                formatOptions:{
+                                    showMeasure: false,
+                                    style:'short',
+                                    decimals:2,
+                                    roundingMode:'TOWARDS_ZERO',
+                                    groupingSeparator:'.',
+                                    decimalSeparator:',',
+                                    groupingEnabled:false
+                                }                      
                             }"
                             numberUnit="{currency>/usd}"
-                            />
+                            numberState="{= ${invoices>ExtendedPrice} >50?'Success':'Error'}">
+                <firstStatus>
+                    <ObjectStatus text="{
+                        path:'invoices>Status',
+                        formatter:'.modelFormatter.invoiceStatus'
+                    }">
+                    </ObjectStatus>
+                </firstStatus>
+                <secondStatus>
+                    <ObjectStatus   text="{
+                        path:'invoices>Status',
+                        formatter:'.modelFormatter.invoiceStatus'
+                    }"
+                    title="hola"
+                    >
+                    </ObjectStatus>
+                </secondStatus>
+            </ObjectListItem>
         </items>        
     </List>
 </mvc:View>
